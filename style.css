@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 62.5%;
+  /* border: 2px solid red; */
+  min-height: 100vh;
+  background: #444444;
+  color: white;
+}
+
+.container {
+  /* border: 2px solid red; */
+
+  display: flex;
+  flex-direction: column;
+  /* gap: 2rem; */
+}
+.item-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: tomato;
+  padding: 2rem 0;
+}
+
+.item-2 {
+  /* border: 2px solid red; */
+  font-size: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  max-width: 630px;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+}
+.item-back {
+  background: blue;
+  padding: 1em 0;
+}
+.right {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.great {
+  font-size: 2rem;
+  text-align: center;
+}
+.rgb {
+  font-size: 3rem;
+  text-align: center;
+}
+.color-game {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.item-3 {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
+  /* border: 2px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  height: 200px;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: white;
+  cursor: pointer;
+}
+.btn{
+  cursor: pointer;
+  padding: 0.2em;
+}
+
+.btn:hover{
+  background: steelblue;
+}
+
+.reset{
+  display: none;
+}
+
+.left{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.good-job{
+  display: none;
+  padding: 0.2em;
+}
+
+.easy{
+  visibility: hidden;
+}
+
+.hard{
+  display: none;
+}
+
+.mid{
+  margin-top: -7px;
+}
+
+@media screen and (max-width:700px){
+  .item-2 {
+    font-size: 1.2rem;
+  }
+  .great {
+    font-size: 1.5rem;
+  }
+  .rgb {
+    font-size: 2rem;
+  }
+  .color-game {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width:600px){
+  .item-2{
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width:350px){
+  .item-2{
+    font-size: 1rem;
+  }
+}
