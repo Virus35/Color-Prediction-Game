@@ -7,6 +7,7 @@ const blue = document.querySelector(".blue");
 const newColors = document.querySelector(".new-colors");
 const reset_btn = document.querySelector(".reset");
 let pickedIndex;
+let count=0;
 
 // const randomColorGenerator = () => {
 //   red.innerHTML = Math.floor(Math.random() * 256);
@@ -19,7 +20,7 @@ const randomSquareColors = () => {
   for (squ of squares) {
     let random = Math.floor(Math.random() * 16777215).toString(16);
     squ.style.background = `#${random}`;
-    console.log(random);
+    // console.log(random);
   }
 };
 
@@ -27,6 +28,7 @@ const randomTargerColor = () => {
   pickedIndex = Math.floor(Math.random() * 6);
   pickedIndex=squares[pickedIndex].style.background;
   document.querySelector(".rgb").innerHTML=pickedIndex;
+  console.log(pickedIndex);
 };
 
 const reset = (ind) => {
@@ -58,12 +60,15 @@ squares.forEach((cur_val, index) => {
       document.querySelector(".mid").innerHTML = "Good Job 😍";
       document.querySelector(".item-1").style.background=pickedIndex;
       reset(squares[index]);
+      ++count;
+     if(count==1){
       swal({
         title: "Good job!",
         text: "Your Guess is Right!",
         icon: "success",
         button: "Aww yiss!",
       });
+     }
     } else {
       document.querySelector(".mid").innerHTML = "Status: Try Again 😦";
       Swal.fire({
@@ -83,5 +88,6 @@ reset_btn.addEventListener("click", (e) => {
   document.querySelector(".mid").innerHTML="";
   document.querySelector(".item-1").style.background="tomato";
   document.querySelector(".mid").innerHTML="Status: Start Guessing 😦";
+  count=0;
   start();
 });
