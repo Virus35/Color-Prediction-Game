@@ -31,7 +31,7 @@ This is the assignment given in the **"JavaScript Full Stack Web Developer Bootc
 
 
 
-### Time Taken to Complete this Project:- 6 Hours
+### Time Taken to Complete this Project:- 4.5 Hours
 
 ### 📬 Connect With Me
 
